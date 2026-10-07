@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beasley Group | Forest Products, Lumber, Crane Mats &amp; Renewable Energy</title>
+  <meta name="description" content="Beasley Group is a vertically integrated forest products company providing lumber, crane mats, flooring, veneer, renewable energy and industrial wood products across domestic and international markets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #003d71;
+      --blue-mid: #005d9b;
+      --blue-bright: #007dc4;
+      --green: #1c3d32;
+      --charcoal: #1b1e1f;
+      --gray: #58595b;
+      --ink: #1c1e1f;
+      --paper: #f6f3ee;
+      --card: #fff;
+      --line: #e4ddd2;
+      --wood: #b08968;
+      --focus: #007dc4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.55;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--blue-mid); }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    h1, h2, h3 { font-family: Outfit, "Segoe UI", sans-serif; font-weight: 600; letter-spacing: -0.03em; line-height: 1.02; }
+    .skip { position: absolute; left: 1rem; top: -4rem; background: #fff; z-index: 80; padding: 0.5rem 0.8rem; }
+    .skip:focus { top: 0.5rem; }
+    .wrap { width: min(1160px, calc(100% - 2.4rem)); margin: 0 auto; }
+    section { scroll-margin-top: 140px; }
+    .sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    .top {
+      position: sticky; top: 0; z-index: 40;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(0, 30, 55, .04);
+    }
+    .head {
+      display: flex; align-items: center; gap: 1.25rem;
+      min-height: 78px;
+    }
+    .brand { display: flex; align-items: center; margin-right: auto; }
+    .brand img { height: 54px; width: auto; }
+    .actions { display: flex; align-items: center; gap: 0.7rem; }
+    .phone-link {
+      color: var(--blue); text-decoration: none; font-weight: 700;
+      letter-spacing: 0.02em; padding-right: 0.35rem;
+    }
+    .phone-link:hover { color: var(--blue-bright); }
+    .navrow { border-top: 1px solid #efeae3; background: #f7f5f2; position: relative; }
+    nav { display: flex; align-items: stretch; justify-content: space-between; width: 100%; }
+    nav > a, .navlink {
+      color: var(--blue); text-decoration: none; background: none; border: 0;
+      font: inherit; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      min-height: 52px; padding: 0 0.85rem;
+      border-bottom: 3px solid transparent;
+    }
+    nav > a:hover, .navlink:hover, .item:hover > .navlink, .item:focus-within > .navlink {
+      color: var(--blue-bright); border-bottom-color: var(--blue-bright);
+    }
+    .item:hover > .navlink .chev, .item:focus-within > .navlink .chev { transform: translateY(1px) rotate(225deg); }
+    .chev { display: inline-block; flex: none; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+    .mega::before, .drop::before { content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
+    .iconbtn, .btn {
+      min-height: 44px; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none;
+    }
+    .iconbtn {
+      width: 44px; border: 1px solid #d5dee6; background: #fff; color: var(--blue);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .iconbtn:hover { border-color: var(--blue); background: #f3f8fb; }
+    .btn { display: inline-flex; align-items: center; background: var(--blue); color: #fff; border: 0; padding: 0.7rem 1rem; }
+    .btn:hover { background: var(--blue-mid); color: #fff; }
+    .btn.light { background: #fff; color: var(--blue); }
+    .burger {
+      display: none; width: 44px; height: 44px; border: 1px solid #d5dee6; background: #fff;
+      padding: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+    }
+    .burger span:not(.sr) { display: block; width: 18px; height: 2px; background: var(--blue); }
+    .item { position: static; }
+    .mega, .drop { display: none; }
+    .item:hover > .mega, .item:focus-within > .mega,
+    .item:hover > .drop, .item:focus-within > .drop { display: block; }
+    .mega {
+      position: absolute; left: 0; right: 0; top: 100%; z-index: 30;
+      background: #fff; border-top: 3px solid var(--blue);
+      box-shadow: 0 28px 60px rgba(0, 32, 58, .16);
+    }
+    .mega-in {
+      display: grid; grid-template-columns: 280px 1fr; gap: 1.6rem; align-items: stretch;
+      padding: 1.5rem 0 1.6rem;
+    }
+    .mega-lead {
+      background: var(--blue); color: #fff; padding: 1.25rem 1.2rem 1.3rem;
+    }
+    .mega-lead h3 { color: #fff; margin: 0.35rem 0 0.45rem; font-size: 1.45rem; letter-spacing: -0.03em; text-transform: none; }
+    .mega-lead p { margin: 0 0 1rem; color: #d5e4ef; }
+    .mega-lead .btn { background: #fff; color: var(--blue); }
+    .mega-lead .btn:hover { background: #e7f2f8; }
+    .eyebrow { margin: 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #9ec4de; }
+    .mega-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; padding-top: 0.2rem; }
+    .mega-cols h3, .drop h3 {
+      margin: 0 0 0.55rem; color: var(--blue); font-size: 0.72rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .mega a.mlink, .drop a {
+      display: block; color: var(--ink); text-decoration: none; padding: 0.38rem 0;
+      border-bottom: 1px solid #f0ebe4;
+    }
+    .mega a.mlink:hover, .drop a:hover { color: var(--blue-bright); }
+    .mega a.mlink small, .co-link small { display: block; color: var(--gray); font-weight: 600; font-size: 0.82rem; letter-spacing: 0; text-transform: none; }
+    .co-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.4rem; }
+    .ind-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.7rem; }
+    .ind-row a {
+      display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; color: #fff;
+      min-height: 168px; padding: 0.85rem; position: relative; overflow: hidden;
+      background-size: cover; background-position: center;
+    }
+    .ind-row a::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(4, 18, 32, .82), rgba(4, 18, 32, .12));
+    }
+    .ind-row a:hover { color: #fff; }
+    .ind-row strong, .ind-row span { position: relative; z-index: 1; }
+    .ind-row strong { display: block; font-family: Outfit, sans-serif; font-size: 1.05rem; margin-bottom: 0.25rem; color: #fff; }
+    .ind-row span { color: #e7eef3; font-size: 0.88rem; }
+    .mega-foot {
+      grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center;
+      border-top: 1px solid var(--line); margin-top: 0.4rem; padding-top: 0.85rem;
+    }
+    .item.compact { position: relative; }
+    .drop {
+      position: absolute; top: 100%; left: 0; width: 260px; z-index: 30;
+      background: #fff; border-top: 3px solid var(--blue);
+      box-shadow: 0 18px 40px rgba(0, 32, 58, .14); padding: 0.7rem 1rem 0.85rem;
+    }
+    .hero {
+      position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch;
+      color: #fff; overflow: hidden; background: #061018 url("images/forest.jpg") center 42% / cover no-repeat;
+      padding: 0;
+    }
+    .hero video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero .shade {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(4, 16, 28, .84) 0%, rgba(4, 16, 28, .42) 46%, rgba(4, 16, 28, .12) 100%);
+    }
+    .hero .wrap { position: relative; z-index: 1; padding: 8.5rem 0 6.5rem; }
+    .chapters {
+      position: relative; z-index: 1; display: flex; width: 100%;
+      border-top: 1px solid rgba(255,255,255,.22); background: rgba(4, 14, 24, .35);
+    }
+    .chapters span {
+      flex: 1; padding: 0.9rem 1rem; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.16em; border-right: 1px solid rgba(255,255,255,.16);
+    }
+    .chapters span:last-child { border-right: 0; }
+    .chapters b { display: block; font-family: Outfit, sans-serif; font-size: 0.95rem; letter-spacing: 0; margin-top: 0.2rem; }
+    .kicker { margin: 0 0 0.7rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; }
+    h1 { font-size: clamp(3.2rem, 6.4vw, 5.6rem); max-width: 11ch; margin: 0 0 0.9rem; }
+    .lede { max-width: 38rem; margin: 0 0 1.4rem; font-size: 1.2rem; color: #e7eef4; }
+    .row { display: flex; flex-wrap: wrap; gap: 1rem 1.3rem; align-items: center; }
+    .textlink { color: #fff; font-weight: 700; }
+    .bar { background: var(--charcoal); color: #fff; }
+    .bar .wrap { display: grid; grid-template-columns: 1.3fr repeat(4, 1fr); gap: 1rem; padding: 1.35rem 0; }
+    .bar strong { display: block; font-family: Outfit, sans-serif; font-size: 1.7rem; color: #fff; }
+    .bar span { color: #c9d0d4; }
+    .bar .label { color: var(--wood); font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 700; }
+    .section { padding: 4.6rem 0; }
+    .section h2 { font-size: clamp(2.1rem, 4vw, 3.3rem); margin: 0 0 0.7rem; max-width: 18ch; }
+    .sub { max-width: 42rem; color: var(--gray); margin: 0 0 1.5rem; }
+    .split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2.5rem; align-items: center; }
+    .split img { width: 100%; height: 460px; object-fit: cover; }
+    .caps { display: grid; grid-template-columns: 1.35fr 1fr 1fr; grid-template-rows: 340px 340px; gap: 0.7rem; }
+    .cap.land { grid-row: 1 / span 2; }
+    .shotcard {
+      position: relative; overflow: hidden; color: #fff; text-decoration: none;
+      min-height: 340px; padding: 1.2rem 1.1rem 1.15rem;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      background-size: cover; background-position: center;
+      transition: transform .28s ease;
+    }
+    .shotcard::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(6, 18, 32, .9) 0%, rgba(6, 18, 32, .28) 52%, rgba(6, 18, 32, .08) 100%);
+    }
+    .shotcard > * { position: relative; z-index: 1; }
+    .shotcard:hover { transform: translateY(-5px); }
+    .cap { min-height: 0; height: 100%; }
+    .cap .n { color: #e4c4a2; font-weight: 700; letter-spacing: 0.14em; font-size: 0.75rem; }
+    .cap h3 { margin: 0.35rem 0 0.35rem; font-size: 1.55rem; color: #fff; }
+    .cap p { margin: 0 0 0.7rem; color: #e7eef3; }
+    .cap a { color: #fff; font-weight: 700; text-decoration: none; }
+    .mega-prod { padding: 1.15rem 0 1.3rem; }
+    .mega-shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.65rem; }
+    .mega-shots a {
+      min-height: 176px; background-size: cover; background-position: center;
+      display: flex; align-items: flex-end; padding: 0.8rem 0.9rem;
+      color: #fff; text-decoration: none; position: relative; overflow: hidden;
+      font-family: Outfit, sans-serif; font-weight: 600; font-size: 1.25rem;
+    }
+    .mega-shots a::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(4, 18, 32, .82), rgba(4, 18, 32, .05) 58%);
+    }
+    .mega-shots a span { position: relative; z-index: 1; }
+    .mega-shots a:hover { color: #fff; }
+    .mega-bottom { display: grid; grid-template-columns: 250px 1fr; gap: 1.3rem; margin-top: 1rem; align-items: start; }
+    .finder {
+      background: #fff; border: 1px solid var(--line); padding: 1.4rem;
+      box-shadow: 0 16px 40px rgba(0, 40, 70, .06);
+    }
+    .fields { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr auto; gap: 0.7rem; align-items: end; }
+    label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.3rem; }
+    input, select, textarea {
+      width: 100%; font: inherit; color: var(--ink); background: #fff;
+      border: 1px solid #c9d3dc; min-height: 48px; padding: 0.45rem 0.7rem;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .answer { margin-top: 1rem; background: #e8f2f8; border-left: 4px solid var(--blue); padding: 0.9rem 1rem; }
+    .pcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    .pcard { min-height: 300px; }
+    .pcard.big { grid-column: span 2; min-height: 430px; }
+    .pcard h3 { margin: 0 0 0.3rem; font-size: 1.7rem; color: #fff; }
+    .pcard.big h3 { font-size: 2.15rem; }
+    .pcard p { margin: 0; color: #e7eef3; }
+    .inds, .res, .four { display: grid; gap: 0.75rem; }
+    .inds { grid-template-columns: repeat(5, 1fr); }
+    .inds .shotcard { min-height: 280px; }
+    .inds h3 { margin: 0 0 0.3rem; font-size: 1.25rem; color: #fff; }
+    .inds p { margin: 0 0 0.45rem; color: #e7eef3; }
+    .inds a { color: #fff; font-weight: 700; text-decoration: none; }
+    .co { padding: 0; overflow: hidden; }
+    .co .pic { height: 132px; background-size: cover; background-position: center; }
+    .res, .four { grid-template-columns: repeat(4, 1fr); }
+    .res article, .co {
+      background: #fff; border: 1px solid var(--line);
+    }
+    .res article { padding: 1.05rem 1rem 1.15rem; }
+    .co h3, .co span { display: block; padding: 0 0.9rem; }
+    .co h3 { padding-top: 0.75rem; }
+    .co span { padding-bottom: 0.85rem; }
+    .inds h3, .res h3 { margin: 0 0 0.35rem; font-size: 1.15rem; }
+    .inds p, .res p, .co p { margin: 0 0 0.6rem; color: var(--gray); }
+    .cos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; }
+    .co h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+    .co span { color: var(--blue); font-size: 0.85rem; font-weight: 700; }
+    .dark {
+      background:
+        linear-gradient(180deg, rgba(12, 16, 18, .9), rgba(12, 16, 18, .92)),
+        url("images/yard.jpg") center 40% / cover no-repeat;
+      color: #fff;
+    }
+    .finder-band {
+      background:
+        linear-gradient(180deg, rgba(6, 18, 32, .78), rgba(6, 18, 32, .86)),
+        url("images/warehouse.jpg") center 60% / cover no-repeat;
+    }
+    .finder-band h2, .finder-band .sub { color: #fff; }
+    .finder-band .sub { color: #d5e4ee; }
+    .dark h2, .dark h3 { color: #fff; }
+    .dark p { color: #d5dbde; }
+    .dark .four article { background: transparent; border: 1px solid rgba(255,255,255,.14); }
+    .greenband { background: var(--green); color: #fff; }
+    .greenband h2 { color: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 2rem; align-items: start; }
+    .phone { font-family: Outfit, sans-serif; font-size: 2.4rem; margin: 0.2rem 0; }
+    .phone a { color: var(--blue); text-decoration: none; }
+    .foot { background: var(--blue); color: #e6eef5; padding: 2.6rem 0 2rem; }
+    .foot a { color: #fff; text-decoration: none; }
+    .foot a:hover { text-decoration: underline; }
+    .footgrid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 0.9fr; gap: 1.2rem; }
+    .foot h3 { color: #fff; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.5rem; }
+    .foot li { list-style: none; margin: 0.22rem 0; }
+    .foot ul { margin: 0; padding: 0; }
+    .search {
+      display: none; position: fixed; inset: 0; z-index: 70;
+      background: rgba(10, 24, 36, .55); padding: 10vh 1rem 2rem;
+    }
+    .search.open { display: block; }
+    .searchbox { width: min(720px, 100%); margin: 0 auto; background: #fff; padding: 1.2rem; border-top: 5px solid var(--blue); }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0; }
+    .chips button { border: 1px solid var(--line); background: var(--paper); color: var(--blue); font: inherit; font-weight: 700; padding: 0.35rem 0.6rem; cursor: pointer; }
+    .hit { border-top: 1px solid var(--line); padding: 0.55rem 0; }
+    .hit small { color: var(--blue-bright); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    @media (max-width: 1240px) {
+      .caps, .inds, .pcards, .mega-shots { grid-template-columns: 1fr 1fr; }
+      .caps { grid-template-rows: none; }
+      .cap.land { grid-row: auto; }
+      .cap { min-height: 300px; }
+      .chapters span { letter-spacing: 0.08em; padding: 0.7rem; }
+      .pcard.big { grid-column: auto; min-height: 320px; }
+      .mega-bottom { grid-template-columns: 1fr; }
+      .fields { grid-template-columns: 1fr 1fr; }
+      .phone-link { display: none; }
+      .burger { display: flex; }
+      .navrow {
+        display: none; position: absolute; left: 0; right: 0; top: 100%;
+        max-height: calc(100vh - 78px); overflow: auto;
+        border-top: 3px solid var(--blue);
+        box-shadow: 0 24px 40px rgba(0, 32, 58, .16);
+      }
+      .top.open .navrow { display: block; }
+      nav { flex-direction: column; justify-content: flex-start; gap: 0; }
+      nav > a, .navlink { min-height: 48px; border-bottom: 1px solid #efeae3; width: 100%; justify-content: space-between; }
+      .item:hover > .mega, .item:focus-within > .mega,
+      .item:hover > .drop, .item:focus-within > .drop { display: none; }
+      .item.open > .mega, .item.open > .drop { display: block; }
+      .mega, .drop { position: static; width: auto; box-shadow: none; border-top: 0; }
+      .mega-in, .mega-cols, .co-grid, .ind-row { grid-template-columns: 1fr; }
+      .mega-lead { margin: 0.4rem 0; }
+      .ind-row a { min-height: 0; }
+    }
+    @media (max-width: 760px) {
+      .split, .contact-grid, .bar .wrap, .res, .four, .cos, .footgrid, .pcards, .mega-shots, .caps, .inds { grid-template-columns: 1fr; }
+      .hero { min-height: 88vh; }
+      .hero .wrap { padding: 6rem 0 2.4rem; }
+      .chapters { flex-wrap: wrap; }
+      .chapters span { flex: 1 1 50%; }
+      .split img, .products .shot { height: 240px; position: relative; }
+      .products .shot img { position: relative; height: 240px; }
+      h1 { font-size: 3rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .cap, .shotcard { transition: none; }
+      .hero video { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#finder">Skip to product finder</a>
+  <header class="top" id="site-header">
+    <div class="wrap head">
+      <a class="brand" href="#top"><img src="images/logo.svg" alt="Beasley Group"></a>
+      <div class="actions">
+        <a class="phone-link" href="tel:+19123755174">912-375-5174</a>
+        <button class="iconbtn" id="open-search" type="button" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <a class="btn" href="#contact">Request information</a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+          <span class="sr">Menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="navrow">
+      <div class="wrap">
+        <nav id="primary-nav" aria-label="Primary">
+          <div class="item">
+            <button class="navlink" type="button" aria-expanded="false">Companies &amp; Divisions <i class="chev"></i></button>
+            <div class="mega">
+              <div class="wrap mega-in">
+                <div class="mega-lead">
+                  <p class="eyebrow">Since 1968</p>
+                  <h3>Eleven companies. One group.</h3>
+                  <p>Specialized businesses across forestry, mills, access and energy.</p>
+                  <a class="btn" href="#companies">Explore our companies</a>
+                </div>
+                <div>
+                  <div class="co-grid">
+                    <a class="mlink" href="#companies">Ashland Mat Co.<small>Crane mats &amp; access</small></a>
+                    <a class="mlink" href="#companies">Beasley Flooring Products<small>Hardwood flooring</small></a>
+                    <a class="mlink" href="#companies">Beasley Forest Products<small>Forest products</small></a>
+                    <a class="mlink" href="#companies">Beasley Timber Company<small>Timber &amp; forestry</small></a>
+                    <a class="mlink" href="#companies">Denmark Lumber<small>Lumber products</small></a>
+                    <a class="mlink" href="#companies">Fram Renewable Fuels<small>Renewable energy</small></a>
+                    <a class="mlink" href="#companies">Green Power Solutions<small>Energy solutions</small></a>
+                    <a class="mlink" href="#companies">Telfair Forest Products<small>Forest products</small></a>
+                    <a class="mlink" href="#companies">Thompson Hardwoods<small>Hardwood products</small></a>
+                    <a class="mlink" href="#companies">Truax Veneer<small>Veneer products</small></a>
+                    <a class="mlink" href="#companies">Wood Fiber Technologies<small>Wood fiber products</small></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <button class="navlink" type="button" aria-expanded="false">Products <i class="chev"></i></button>
+            <div class="mega">
+              <div class="wrap mega-prod">
+                <div class="mega-shots">
+                  <a href="#products" data-fill="Crane mats" style="background-image:url('images/planks.jpg')"><span>Crane mats</span></a>
+                  <a href="#products" data-fill="Grade lumber" style="background-image:url('images/warehouse.jpg')"><span>Grade lumber</span></a>
+                  <a href="#products" data-fill="Flooring" style="background-image:url('images/boards.jpg')"><span>Flooring</span></a>
+                  <a href="#products" data-fill="Pellets" style="background-image:url('images/mulch.jpg')"><span>Pellets</span></a>
+                </div>
+                <div class="mega-bottom">
+                <div class="mega-lead">
+                  <p class="eyebrow">Product finder</p>
+                  <h3>Not sure where to start?</h3>
+                  <p>Tell us the product and the job. We will point you to the right division.</p>
+                  <a class="btn" href="#finder">Use product finder</a>
+                </div>
+                <div class="mega-cols">
+                  <div>
+                    <h3>Access &amp; infrastructure</h3>
+                    <a class="mlink" href="#products" data-fill="Crane mats">Crane mats</a>
+                    <a class="mlink" href="#products" data-fill="Cross ties">Cross ties</a>
+                    <a class="mlink" href="#products" data-fill="Timbers">Timbers</a>
+                  </div>
+                  <div>
+                    <h3>Lumber &amp; wood products</h3>
+                    <a class="mlink" href="#products" data-fill="Grade lumber">Grade lumber</a>
+                    <a class="mlink" href="#products" data-fill="Pallet lumber">Pallet lumber</a>
+                    <a class="mlink" href="#products" data-fill="Flooring">Flooring</a>
+                    <a class="mlink" href="#products" data-fill="Veneer">Veneer</a>
+                  </div>
+                  <div>
+                    <h3>Energy &amp; materials</h3>
+                    <a class="mlink" href="#products" data-fill="Pellets">Pellets</a>
+                    <a class="mlink" href="#products" data-fill="Residuals">Residuals</a>
+                    <a class="mlink" href="#products" data-fill="Shavings">Shavings</a>
+                    <a class="mlink" href="#products" data-fill="Wood flour">Wood flour</a>
+                    <a class="mlink" href="#products" data-fill="Cypress mulch">Cypress mulch</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <button class="navlink" type="button" aria-expanded="false">Industries <i class="chev"></i></button>
+            <div class="mega">
+              <div class="wrap" style="padding:1.35rem 0 1.5rem">
+                <div class="ind-row">
+                  <a href="#industries" data-fill="Crane mats" style="background-image:url('images/site.jpg')"><strong>Energy &amp; utilities</strong><span>Mats and access for infrastructure work.</span></a>
+                  <a href="#industries" data-fill="Grade lumber" style="background-image:url('images/warehouse.jpg')"><strong>Construction</strong><span>Lumber, flooring and site materials.</span></a>
+                  <a href="#industries" data-fill="Cross ties" style="background-image:url('images/trees.jpg')"><strong>Transportation</strong><span>Ties and products for rail and roads.</span></a>
+                  <a href="#industries" data-fill="Veneer" style="background-image:url('images/yard.jpg')"><strong>Manufacturing</strong><span>Veneer, flour and industrial wood.</span></a>
+                  <a href="#contact" style="background-image:url('images/forest.jpg')"><strong>Export markets</strong><span>USA, Canada, Europe and Asia.</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#sustainability">Sustainability</a>
+          <div class="item compact">
+            <button class="navlink" type="button" aria-expanded="false">Resources <i class="chev"></i></button>
+            <div class="drop">
+              <a href="#resources">Product resources</a>
+              <a href="#finder">Data sheets &amp; specifications</a>
+              <a href="#resources">News &amp; insights</a>
+              <a href="#about">Company resources</a>
+            </div>
+          </div>
+          <div class="item compact">
+            <button class="navlink" type="button" aria-expanded="false">About <i class="chev"></i></button>
+            <div class="drop">
+              <a href="#about">About Beasley Group</a>
+              <a href="#companies">Companies &amp; divisions</a>
+              <a href="#sustainability">Sustainability</a>
+              <a href="#careers">Careers</a>
+              <a href="#about">Safety</a>
+              <a href="#about">Giving back</a>
+              <a href="https://www.beasleygroup.com/ministry.cms">Ministry</a>
+            </div>
+          </div>
+          <a href="#careers">Careers</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <video autoplay muted loop playsinline poster="images/forest.jpg">
+        <source src="videos/hero.mp4" type="video/mp4">
+      </video>
+      <div class="shade"></div>
+      <div class="wrap">
+        <p class="kicker">FOREST PRODUCTS · ENERGY · INDUSTRIAL MATERIALS</p>
+        <h1>From forest to finished product.</h1>
+        <p class="lede">Integrated forestry, manufacturing, energy and material solutions — built around quality, reliability and the needs of the industries we serve.</p>
+        <div class="row">
+          <a class="btn light" href="#products">Explore our products</a>
+          <a class="btn" href="#finder">Find your solution</a>
+          <a class="textlink" href="#contact">Talk to a Beasley specialist</a>
+        </div>
+      </div>
+      <div class="chapters" aria-hidden="true">
+        <span>01 <b>Forest</b></span>
+        <span>02 <b>Harvest</b></span>
+        <span>03 <b>Mill</b></span>
+        <span>04 <b>Finished product</b></span>
+      </div>
+    </section>
+
+    <section class="bar" aria-label="Scale">
+      <div class="wrap">
+        <div>
+          <p class="label">BUILT ON INTEGRATION. DRIVEN BY PERFORMANCE.</p>
+          <strong>Since 1968</strong>
+          <span>One integrated group. Multiple specialized businesses.</span>
+        </div>
+        <div><strong data-count="50">50+</strong><span>Years of industry experience</span></div>
+        <div><strong data-count="5">5</strong><span>Integrated business segments</span></div>
+        <div><strong data-count="11">11</strong><span>Companies and divisions</span></div>
+        <div><strong>Global reach</strong><span>USA · Canada · Europe · Asia</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div>
+          <h2>A vertically integrated approach to forest products.</h2>
+          <p>From owning and managing timber resources to manufacturing, energy and finished products, Beasley Group connects every stage of the supply chain.</p>
+          <p class="sub">Our integrated business model allows us to provide customers with dependable products, responsive service and the scale to support projects of all sizes.</p>
+          <a class="btn" href="#companies">Explore the Beasley Group</a>
+        </div>
+        <img src="images/yard.jpg" alt="Hardwood lumber stacked in a Beasley mill warehouse">
+      </div>
+    </section>
+
+    <section class="section" id="segments" style="padding-top:0">
+      <div class="wrap">
+        <h2>One group. Five connected capabilities.</h2>
+        <div class="caps">
+          <article class="cap shotcard land" style="background-image:url('images/forest.jpg')">
+            <span class="n">01</span>
+            <h3>Land</h3>
+            <p>Responsible forestry and timber resources form the foundation of the operation.</p>
+            <a href="#companies">Explore land</a>
+          </article>
+          <article class="cap shotcard" style="background-image:url('images/trees.jpg')">
+            <span class="n">02</span>
+            <h3>Supply chain</h3>
+            <p>A connected supply chain built for consistent production and dependable delivery.</p>
+            <a href="#companies">Explore supply chain</a>
+          </article>
+          <article class="cap shotcard" style="background-image:url('images/yard.jpg')">
+            <span class="n">03</span>
+            <h3>Mills</h3>
+            <p>Lumber, flooring, veneer, pellets and other forest products from the mills.</p>
+            <a href="#products">Explore mills</a>
+          </article>
+          <article class="cap shotcard" style="background-image:url('images/planks.jpg')">
+            <span class="n">04</span>
+            <h3>Mats &amp; access</h3>
+            <p>Crane mats, timbers and access solutions for energy, utility and construction.</p>
+            <a href="#finder" data-fill="Crane mats">Explore mats &amp; access</a>
+          </article>
+          <article class="cap shotcard" style="background-image:url('images/mulch.jpg')">
+            <span class="n">05</span>
+            <h3>Energy</h3>
+            <p>Renewable fuels, energy production and wood residuals across the forest-products lifecycle.</p>
+            <a href="#finder" data-fill="Pellets">Explore energy</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section finder-band" id="finder">
+      <div class="wrap">
+        <h2>Find the right product.</h2>
+        <p class="sub">Not sure where to start? Tell us what you are looking for and we will point you to the right Beasley Group product or division.</p>
+        <form class="finder" id="finder-form">
+          <div class="fields">
+            <div>
+              <label for="look">I'm looking for</label>
+              <select id="look">
+                <option>Crane mats</option>
+                <option>Cross ties</option>
+                <option>Timbers</option>
+                <option>Grade lumber</option>
+                <option>Pallet lumber</option>
+                <option>Flooring</option>
+                <option>Pellets</option>
+                <option>Veneer</option>
+                <option>Residuals</option>
+                <option>Shavings</option>
+                <option>Wood flour</option>
+                <option>Cypress mulch</option>
+              </select>
+            </div>
+            <div>
+              <label for="app">Application</label>
+              <select id="app">
+                <option>Energy &amp; utility</option>
+                <option>Construction</option>
+                <option>Transportation &amp; infrastructure</option>
+                <option>Manufacturing</option>
+                <option>Export markets</option>
+              </select>
+            </div>
+            <div>
+              <label for="ptype">Product type</label>
+              <select id="ptype">
+                <option>Access &amp; infrastructure</option>
+                <option>Lumber &amp; wood products</option>
+                <option>Energy &amp; materials</option>
+              </select>
+            </div>
+            <div>
+              <label for="need">Need</label>
+              <select id="need">
+                <option>Request pricing</option>
+                <option>Product information</option>
+                <option>Talk to a specialist</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">Find my solution</button>
+          </div>
+          <div id="match" aria-live="polite"></div>
+          <p><a href="#products">Or browse all products</a></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="wrap">
+        <h2>Products built for the industries that depend on them.</h2>
+        <p class="sub">From heavy-duty crane mats and grade lumber to flooring, pellets, veneer and renewable energy products.</p>
+        <div class="pcards">
+          <a class="shotcard pcard big" href="#finder" data-fill="Crane mats" style="background-image:url('images/planks.jpg')"><h3>Crane mats &amp; access</h3><p>Heavy-duty solutions for demanding worksites.</p></a>
+          <a class="shotcard pcard big" href="#finder" data-fill="Grade lumber" style="background-image:url('images/warehouse.jpg')"><h3>Grade lumber</h3><p>Quality lumber for construction and industrial applications.</p></a>
+          <a class="shotcard pcard" href="#finder" data-fill="Cross ties" style="background-image:url('images/yard.jpg')"><h3>Cross ties</h3><p>Durable products for infrastructure.</p></a>
+          <a class="shotcard pcard" href="#finder" data-fill="Flooring" style="background-image:url('images/boards.jpg')"><h3>Flooring</h3><p>Finished hardwood, built to perform.</p></a>
+          <a class="shotcard pcard" href="#finder" data-fill="Pallet lumber" style="background-image:url('images/planks.jpg');background-position:left center"><h3>Pallet lumber</h3><p>Material for packaging and industry.</p></a>
+          <a class="shotcard pcard" href="#finder" data-fill="Pellets" style="background-image:url('images/mulch.jpg')"><h3>Pellets &amp; energy</h3><p>Forest resources turned into fuel.</p></a>
+          <a class="shotcard pcard big" href="#finder" data-fill="Veneer" style="background-image:url('images/floor.jpg')"><h3>Veneer</h3><p>Precision forest products for specialized applications.</p></a>
+          <a class="shotcard pcard big" href="#finder" data-fill="Residuals" style="background-image:url('images/mulch.jpg');background-position:center bottom"><h3>Residuals &amp; shavings</h3><p>A productive use for every part of the resource.</p></a>
+        </div>
+        <p style="margin-top:1.2rem"><a class="btn" href="#finder">Explore all products</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="industries" style="padding-top:0">
+      <div class="wrap">
+        <h2>Solutions for the industries we serve.</h2>
+        <div class="inds">
+          <article class="shotcard" style="background-image:url('images/site.jpg')">
+            <h3>Energy &amp; utilities</h3>
+            <p>Access solutions for demanding infrastructure projects.</p>
+            <a href="#finder" data-fill="Crane mats">Explore energy &amp; utilities</a>
+          </article>
+          <article class="shotcard" style="background-image:url('images/warehouse.jpg')">
+            <h3>Construction</h3>
+            <p>Materials from site access through finished applications.</p>
+            <a href="#finder" data-fill="Grade lumber">Explore construction</a>
+          </article>
+          <article class="shotcard" style="background-image:url('images/trees.jpg')">
+            <h3>Transportation</h3>
+            <p>Products for transportation, rail and infrastructure.</p>
+            <a href="#finder" data-fill="Cross ties">Explore infrastructure</a>
+          </article>
+          <article class="shotcard" style="background-image:url('images/yard.jpg')">
+            <h3>Manufacturing</h3>
+            <p>Dependable forest products for industrial applications.</p>
+            <a href="#finder" data-fill="Veneer">Explore manufacturing</a>
+          </article>
+          <article class="shotcard" style="background-image:url('images/forest.jpg')">
+            <h3>Export markets</h3>
+            <p>Customers across the USA, Canada, Europe and Asia.</p>
+            <a href="#contact">Explore global markets</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="companies" style="background:#fff">
+      <div class="wrap">
+        <h2>Specialized companies. One connected group.</h2>
+        <p class="sub">The strength of Beasley Group comes from the expertise of the individual companies working as one organization.</p>
+        <div class="cos">
+          <article class="co"><div class="pic" style="background-image:url('images/planks.jpg')"></div><h3>Ashland Mat Co.</h3><span>Crane mats &amp; access</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/boards.jpg')"></div><h3>Beasley Flooring Products</h3><span>Hardwood flooring</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/warehouse.jpg')"></div><h3>Beasley Forest Products</h3><span>Forest products</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/forest.jpg')"></div><h3>Beasley Timber Company</h3><span>Timber &amp; forestry</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/yard.jpg')"></div><h3>Denmark Lumber</h3><span>Lumber products</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/mulch.jpg')"></div><h3>Fram Renewable Fuels</h3><span>Renewable energy</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/trees.jpg')"></div><h3>Green Power Solutions</h3><span>Energy solutions</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/warehouse.jpg')"></div><h3>Telfair Forest Products</h3><span>Forest products</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/floor.jpg')"></div><h3>Thompson Hardwoods</h3><span>Hardwood products</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/floor.jpg')"></div><h3>Truax Veneer</h3><span>Veneer products</span></article>
+          <article class="co"><div class="pic" style="background-image:url('images/mulch.jpg')"></div><h3>Wood Fiber Technologies</h3><span>Wood fiber products</span></article>
+        </div>
+        <p style="margin-top:1.2rem"><a class="btn" href="#contact">Explore our companies</a></p>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap">
+        <h2>More than a product. A supply chain you can depend on.</h2>
+        <div class="four" style="margin-top:1.4rem">
+          <article>
+            <h3>Integrated</h3>
+            <p>The model connects resources, manufacturing and distribution.</p>
+          </article>
+          <article>
+            <h3>Experienced</h3>
+            <p>Decades across forestry, manufacturing, energy and industrial markets.</p>
+          </article>
+          <article>
+            <h3>Responsive</h3>
+            <p>We work directly with customers and deliver practical solutions.</p>
+          </article>
+          <article>
+            <h3>Quality driven</h3>
+            <p>Products and processes built around consistent quality and long relationships.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sustainability">
+      <div class="wrap split">
+        <img src="images/forest.jpg" alt="Standing timber, the resource behind Beasley products">
+        <div>
+          <h2>Growing responsibly. Building for the future.</h2>
+          <p>Responsible forestry is part of how we operate. From resource management to renewable energy and the productive use of wood residuals, Beasley Group looks for ways to create value while protecting the resource.</p>
+          <p><a href="#resources">Carbon footprint</a><br><a href="#resources">Green choice</a><br><a href="#resources">Our approach to sustainability</a></p>
+          <a class="btn" href="#resources">Explore sustainability</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources" style="padding-top:0">
+      <div class="wrap">
+        <h2>Resources &amp; expertise.</h2>
+        <p class="sub">Product information, technical resources and company news in one place.</p>
+        <div class="res">
+          <article>
+            <h3>Product resources</h3>
+            <p>Data sheets and specifications for evaluating a product.</p>
+            <a href="#finder">Data sheets &amp; specifications</a>
+          </article>
+          <article>
+            <h3>News &amp; insights</h3>
+            <p>What is happening across Beasley Group.</p>
+            <a href="#about">Latest news</a>
+          </article>
+          <article>
+            <h3>Company resources</h3>
+            <p>Companies, capabilities and values.</p>
+            <a href="#about">About Beasley Group</a>
+          </article>
+          <article>
+            <h3>Careers</h3>
+            <p>An organization that is still growing.</p>
+            <a href="#careers">Join our team</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section greenband">
+      <div class="wrap">
+        <h2>Have a project in mind?</h2>
+        <p style="max-width:40rem;color:#e4efe8">Whether you need crane mats, lumber, flooring, veneer, renewable energy products or another forest-products solution, the team is ready to help.</p>
+        <div class="row">
+          <a class="btn light" href="#contact">Request information</a>
+          <a class="textlink" href="#finder">Find a product</a>
+        </div>
+        <p><a class="textlink" href="#companies">Looking for a specific division? Explore our companies.</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Need to speak with someone?</h2>
+          <p class="sub">Connect with the right Beasley Group team. The request names the division before it is sent.</p>
+          <p class="phone"><a href="tel:+19123755174">912-375-5174</a></p>
+          <p><a href="mailto:sales@beasleygroup.com">sales@beasleygroup.com</a><br>351 Ralph Womack Rd, Hazlehurst, GA 31539</p>
+        </div>
+        <form id="quote">
+          <label for="q-product">I'm interested in</label>
+          <select id="q-product"></select>
+          <div class="fields" style="grid-template-columns:1fr 1fr;margin-top:0.2rem">
+            <div>
+              <label for="q-qty">Quantity / project size</label>
+              <input id="q-qty" placeholder="40 mats, a truckload">
+            </div>
+            <div>
+              <label for="q-where">My location</label>
+              <input id="q-where" placeholder="State or country">
+            </div>
+            <div>
+              <label for="q-when">Timeline</label>
+              <input id="q-when" placeholder="This month, this season">
+            </div>
+            <div>
+              <label for="q-name">Name</label>
+              <input id="q-name" required autocomplete="name">
+            </div>
+          </div>
+          <label for="q-note">My inquiry</label>
+          <textarea id="q-note" placeholder="Tell us what you need"></textarea>
+          <button class="btn" type="submit">Get in touch</button>
+          <div id="sent" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="careers" style="padding-top:0">
+      <div class="wrap split">
+        <div>
+          <h2>Build something that lasts.</h2>
+          <p>At Beasley Group, people are at the center of the work. The companies are building a safer, stronger and more rewarding place to work across the communities they serve.</p>
+          <div class="row">
+            <a class="btn" href="https://www.beasleygroup.com/openings.cms">View current openings</a>
+            <a href="#about">Life at Beasley</a>
+          </div>
+        </div>
+        <img src="images/boards.jpg" alt="Finished hardwood flooring, one of the products made in the group">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap footgrid">
+      <div>
+        <img src="images/logo.svg" alt="" style="height:70px;width:auto;background:#fff;padding:0.35rem">
+        <p>Forest products. Energy. Manufacturing. Built together.</p>
+      </div>
+      <div>
+        <h3>Companies</h3>
+        <ul>
+          <li>Ashland Mat Co.</li>
+          <li>Beasley Flooring Products</li>
+          <li>Beasley Forest Products</li>
+          <li>Beasley Timber Company</li>
+          <li>Denmark Lumber</li>
+          <li>Fram Renewable Fuels</li>
+          <li>Green Power Solutions</li>
+          <li>Telfair Forest Products</li>
+          <li>Thompson Hardwoods</li>
+          <li>Truax Veneer</li>
+          <li>Wood Fiber Technologies</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Products</h3>
+        <ul>
+          <li>Crane mats</li><li>Cross ties</li><li>Cypress mulch</li><li>Energy</li>
+          <li>Flooring</li><li>Grade lumber</li><li>Pallet lumber</li><li>Pellets</li>
+          <li>Residuals</li><li>Shavings</li><li>Veneer</li><li>Wood flour</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#resources">News</a></li>
+          <li><a href="#about">Safety</a></li>
+          <li><a href="#about">Giving back</a></li>
+          <li><a href="https://www.beasleygroup.com/ministry.cms">Ministry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Sales</a></li>
+          <li><a href="#contact">Request information</a></li>
+          <li>Hazlehurst, Georgia</li>
+          <li><a href="tel:+19123755174">912-375-5174</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search" id="search" role="dialog" aria-modal="true" aria-labelledby="search-label">
+    <div class="searchbox">
+      <label id="search-label" for="q">What are you looking for?</label>
+      <input id="q" placeholder="Search products, companies, resources and information">
+      <div class="chips" id="chips"></div>
+      <div id="hits"></div>
+      <p><button class="btn" id="close-search" type="button">Close</button></p>
+    </div>
+  </div>
+
+  <script>
+    const header = document.getElementById("site-header");
+    const burger = document.getElementById("burger");
+    burger.addEventListener("click", () => {
+      const open = header.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+    document.querySelectorAll(".item > .navlink").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (window.matchMedia("(min-width: 1241px)").matches) return;
+        const item = btn.parentElement;
+        const willOpen = !item.classList.contains("open");
+        header.querySelectorAll(".item.open").forEach((el) => {
+          el.classList.remove("open");
+          el.querySelector(".navlink").setAttribute("aria-expanded", "false");
+        });
+        item.classList.toggle("open", willOpen);
+        btn.setAttribute("aria-expanded", String(willOpen));
+      });
+    });
+    header.querySelectorAll(".navrow a").forEach((link) => {
+      link.addEventListener("click", () => {
+        header.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const catalog = {
+      "Crane mats": ["Ashland Mat Co. and Beasley Forest Products", "(912) 375-5174", "+19123755174", "Mixed hardwood or 100% oak, up to 40 feet."],
+      "Timbers": ["Beasley Forest Products", "(912) 375-5174", "+19123755174", "Timbers for energy, utility and construction access."],
+      "Cross ties": ["Beasley Forest Products", "(912) 375-5174", "+19123755174", "Cross ties and switch ties from Hazlehurst."],
+      "Grade lumber": ["Thompson Hardwoods, Denmark Lumber and Beasley Forest Products", "(912) 375-5174", "+19123755174", "Red oak, white oak, ash, poplar, cypress and the other mill species."],
+      "Pallet lumber": ["Beasley Forest Products", "(912) 375-5174", "+19123755174", "Cants, stringers and cut stock."],
+      "Flooring": ["Beasley Flooring Products", "(478) 550-8105", "+14785508105", "Macon, Georgia, and Franklin and Bryson City, North Carolina."],
+      "Pellets": ["Fram Renewable Fuels", "(912) 375-3068", "+19123753068", "Industrial and residential pellets, including Hazlehurst Wood Pellets."],
+      "Veneer": ["Truax Veneer", "(912) 375-5174", "+19123755174", "Rotary-cut hardwood veneer in Lyons, Georgia."],
+      "Residuals": ["Beasley Forest Products", "(912) 375-5174", "+19123755174", "Chips, bark and residuals from the mills."],
+      "Shavings": ["Beasley Forest Products", "(912) 375-5174", "+19123755174", "Shavings from the hardwood mills."],
+      "Wood flour": ["Wood Fiber Technologies", "(912) 375-5174", "+19123755174", "Hardwood flour milled in Macon."],
+      "Cypress mulch": ["Thompson Hardwoods", "(912) 375-5174", "+19123755174", "Cypress mulch from Hazlehurst."]
+    };
+
+    const index = [
+      ["Crane mats", "Products"], ["Grade lumber", "Products"], ["Flooring", "Products"],
+      ["Veneer", "Products"], ["Pellets", "Products"], ["Cross ties", "Products"],
+      ["Energy", "Products"], ["Wood flour", "Products"],
+      ["Ashland Mat Co.", "Companies"], ["Beasley Flooring Products", "Companies"],
+      ["Fram Renewable Fuels", "Companies"], ["Truax Veneer", "Companies"],
+      ["Beasley Forest Products", "Companies"],
+      ["Sustainability", "Resources"], ["Product specifications", "Resources"],
+      ["Contact sales", "Pages"], ["Careers", "Pages"]
+    ];
+
+    const look = document.getElementById("look");
+    const qProduct = document.getElementById("q-product");
+    Object.keys(catalog).forEach((name) => {
+      const opt = document.createElement("option");
+      opt.textContent = name;
+      qProduct.appendChild(opt);
+    });
+
+    function showMatch(name) {
+      const item = catalog[name];
+      const app = document.getElementById("app").value;
+      const need = document.getElementById("need").value;
+      document.getElementById("match").innerHTML =
+        "<div class=\"answer\"><strong>" + name + "</strong> · " + app + "<p>" + item[0] + ". " + item[3] + "</p><p>" + need + " · <a href=\"tel:" + item[2] + "\">" + item[1] + "</a></p><p><a href=\"#contact\">Request information</a></p></div>";
+      qProduct.value = name;
+    }
+
+    document.getElementById("finder-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      showMatch(look.value);
+    });
+
+    document.querySelectorAll("[data-fill]").forEach((link) => {
+      link.addEventListener("click", () => { look.value = link.dataset.fill; });
+    });
+
+    document.getElementById("quote").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = qProduct.value;
+      const item = catalog[name];
+      const who = document.getElementById("q-name").value.trim();
+      const qty = document.getElementById("q-qty").value.trim();
+      const where = document.getElementById("q-where").value.trim();
+      const when = document.getElementById("q-when").value.trim();
+      const note = document.getElementById("q-note").value.trim();
+      const subject = encodeURIComponent(name + " — " + (where || "inquiry"));
+      const body = encodeURIComponent([name, item[0], who, qty, where, when, note].filter(Boolean).join("\n"));
+      document.getElementById("sent").innerHTML =
+        "<div class=\"answer\"><strong>" + item[0] + "</strong><p><a href=\"mailto:sales@beasleygroup.com?subject=" + subject + "&body=" + body + "\">Email this request</a> · <a href=\"tel:" + item[2] + "\">" + item[1] + "</a></p></div>";
+    });
+
+    const search = document.getElementById("search");
+    const q = document.getElementById("q");
+    const hits = document.getElementById("hits");
+    const chips = document.getElementById("chips");
+    ["Crane mats", "Grade lumber", "Flooring", "Veneer", "Pellets", "Energy", "Sustainability", "Product specifications", "Contact sales"].forEach((label) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      b.addEventListener("click", () => { q.value = label; render(label); });
+      chips.appendChild(b);
+    });
+    function render(term) {
+      const t = term.trim().toLowerCase();
+      const found = index.filter((row) => !t || row[0].toLowerCase().includes(t) || row[1].toLowerCase().includes(t));
+      const groups = {};
+      found.forEach((row) => { (groups[row[1]] = groups[row[1]] || []).push(row[0]); });
+      hits.innerHTML = Object.keys(groups).map((group) =>
+        "<div class=\"hit\"><small>" + group + "</small>" + groups[group].map((item) => "<div>" + item + "</div>").join("") + "</div>"
+      ).join("") || "<p>No match. Try crane mats, flooring, or a company name.</p>";
+    }
+    q.addEventListener("input", () => render(q.value));
+    document.getElementById("open-search").addEventListener("click", () => { search.classList.add("open"); q.focus(); render(""); });
+    document.getElementById("close-search").addEventListener("click", () => search.classList.remove("open"));
+    search.addEventListener("click", (e) => { if (e.target === search) search.classList.remove("open"); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") search.classList.remove("open"); });
+  </script>
+</body>
+</html>
